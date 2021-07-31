@@ -1,0 +1,76 @@
+.start, .essential, .route {
+    background-color: $bg;
+    padding: 100px 0;
+    min-height: 100vh;
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__content {
+        position: relative;
+        max-width: 632px;
+        margin-right: 114px;
+        &::before {
+            content: '01';
+            font-size: 240px;
+            line-height: 240px;
+            position: absolute;
+            opacity: 0.1;
+            top: -110px;
+            left: -150px;
+        }
+    }
+
+    &__title {
+        max-width: 555px;
+        margin-top: 27px;
+    }
+
+    &__text {
+        margin-top: 27px;
+    }
+
+    &__link {
+        margin-top: 27px;
+    }
+
+    &__img {
+        max-width: 40%;
+        img {
+           width: 100%;
+           max-height: 80vh;
+        }
+    }
+}
+
+.start {
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, #0B1D26 40.38%);;
+}
+
+.essential {
+    &__container {
+        flex-direction: row-reverse;
+    }
+    &__content {
+        margin-right: 0;
+        &::before {
+            content: '02';
+        }
+    }
+    &__img {
+        margin-right: 114px;
+    }
+}
+
+.route {
+    &__content {
+        &::before {
+            content: '03';
+        }
+    }
+}
+
+

@@ -1,0 +1,111 @@
+.main-screen {
+    min-height: 100vh;
+    &__body {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        top: 0;
+        left: 0;
+    }
+
+    &__container {
+        min-height: 100vh;
+        max-width: $maxWidthContainer + px;
+        margin: 0 auto;
+        padding: 0px 15px;
+        
+    }
+    
+    &__twt, &__ig {
+        padding-top: 24px;
+    }
+
+    &__content {
+        position: absolute;
+        z-index: 5;
+        max-width: 950px;
+        width: 100%;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__title {
+        font-size: 88px;
+        margin-top: 32px;
+    }
+
+    &__scroll-btn {
+        color: $mainColor;
+        padding-right: 32px;
+        position: relative;
+        cursor: pointer;
+        margin-top: 32px;
+        &::after {
+            content: '\e901';
+            font-family: 'icomoon';
+            font-size: 24px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__social-links {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span {
+            writing-mode: vertical-rl;
+            line-height: 22px;
+        }
+    }
+    &__images {
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        top: -10%;
+        left: -10%;
+        z-index: -2;
+    }
+
+    &__item {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        &_clouds, &_mountains, &_human {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+        }
+
+        &_clouds {
+            background: url('../img/main/sky.svg') top / cover no-repeat;
+            top: 0;
+        }
+
+        &_mountains {
+            z-index: 2;
+            background: url('../img/main/mountain.svg') top / cover no-repeat;
+            top: 30%;
+        }
+
+        &_human {
+            z-index: 3;
+            background: url('../img/main/front.svg') top / cover no-repeat;
+            top: 45%;
+            @media (max-aspect-ratio: 3/2) {
+                background-position: 20% top;
+            }
+        }
+    }
+}
+
