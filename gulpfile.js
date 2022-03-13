@@ -32,6 +32,7 @@ function images() {
                 imagemin.svgo({
                     plugins: [
                         { removeViewBox: true },
+                        { svgPlugins: [{ removeViewBox: false }] },
                         { cleanupIDs: false }
                     ]
                 })

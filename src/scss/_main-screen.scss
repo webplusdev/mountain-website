@@ -88,19 +88,19 @@
         }
 
         &_clouds {
-            background: url('../img/main/sky.svg') top / cover no-repeat;
+            background: url('../img/main/sky.png') top / cover no-repeat;
             top: 0;
         }
 
         &_mountains {
             z-index: 2;
-            background: url('../img/main/mountain.svg') top / cover no-repeat;
+            background: url('../img/main/mountain.png') top / cover no-repeat;
             top: 30%;
         }
 
         &_human {
             z-index: 3;
-            background: url('../img/main/front.svg') top / cover no-repeat;
+            background: url('../img/main/front.png') top / cover no-repeat;
             top: 45%;
             @media (max-aspect-ratio: 3/2) {
                 background-position: 20% top;
